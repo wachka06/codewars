@@ -25,6 +25,6 @@ function kebabize(str) {
   }
   return result
 }
-
+   
 console.log(kebabize('myCamelCasedString')) //=> 'my-camel-cased-string');
 console.log(kebabize('myCamelHas3Humps')) //=> 'my-camel-has-humps');
