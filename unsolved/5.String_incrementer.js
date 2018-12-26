@@ -15,8 +15,22 @@ Attention: If the number has leading zeros the amount of digits should be consid
 https://www.codewars.com/kata/string-incrementer/train/javascript
 ***********************************************************************/
 
-function incrementString (strng) {
-   return incrementedString
+function incrementString (string) {
+   let numbers = '123456789'.split('')
+   let newNum = 0
+   let idx = 0
+   for (let i = 0; i < string.length; i++) {
+     let char = string[i]
+     //console.log(char);
+     if (numbers.includes(char)) {
+       newNum = Number(string.slice(i)) + 1
+       //console.log(newNum);
+       idx = i
+       break
+     }
+   }
+   //return "test"
+   return string.slice(0, idx) + newNum
 }
 
 console.log(incrementString("foobar000")) //=> "foobar001"
