@@ -41,12 +41,17 @@ https://www.codewars.com/kata/596f610441372ee0de00006e/train/javascript
 ***********************************************************************/
 
 const deNico = (key, m) => {
-  return m;
+  let keyArr = key.split('').sort()
+  let idx = []
+  for (let i = 0; i < key.length; i++) {
+    idx.push(keyArr.indexOf(key[i]) + 1)
+  }
+  console.log(idx)
 }
 
-console.log(deNico("crazy","cseerntiofarmit on  " )) //=> "secretinformation" 
-console.log(deNico("crazy","cseerntiofarmit on" )) //=> "secretinformation" 
-console.log(deNico("abc", "abcd")) //=> "abcd" 
+console.log(deNico("crazy","cseerntiofarmit on  " )) //=> "secretinformation"
+console.log(deNico("crazy","cseerntiofarmit on" )) //=> "secretinformation"
+console.log(deNico("abc", "abcd")) //=> "abcd"
 console.log(deNico("ba","2143658709" )) //=>  "1234567890"
-console.log(deNico("a", "message")) //=> "message" 
-console.log(deNico("key", "eky")) //=> "key" 
+console.log(deNico("a", "message")) //=> "message"
+console.log(deNico("key", "eky")) //=> "key"
