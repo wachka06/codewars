@@ -43,10 +43,14 @@ https://www.codewars.com/kata/596f610441372ee0de00006e/train/javascript
 const deNico = (key, m) => {
   let keyArr = key.split('').sort()
   let idx = []
+  let result = ''
   for (let i = 0; i < key.length; i++) {
     idx.push(keyArr.indexOf(key[i]) + 1)
   }
-  console.log(idx)
+  // console.log(idx)
+  for (let i = 0; i < m.length; i++) {
+    result += m[]
+  }
 }
 
 console.log(deNico("crazy","cseerntiofarmit on  " )) //=> "secretinformation"
