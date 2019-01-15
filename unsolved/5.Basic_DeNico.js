@@ -53,9 +53,10 @@ const deNico = (key, m) => {
   }
 }
 
+
 console.log(deNico("crazy","cseerntiofarmit on  " )) //=> "secretinformation"
 console.log(deNico("crazy","cseerntiofarmit on" )) //=> "secretinformation"
-console.log(deNico("abc", "abcd")) //=> "abcd" 
+console.log(deNico("abc", "abcd")) //=> "abcd"
 console.log(deNico("ba","2143658709" )) //=>  "1234567890"
 console.log(deNico("a", "message")) //=> "message"
 console.log(deNico("key", "eky")) //=> "key"
