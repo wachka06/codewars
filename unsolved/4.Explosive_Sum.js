@@ -33,6 +33,7 @@ function sum(num) {
   return 0;
 }
 
+
 console.log(sum(1)) //=> 1
 console.log(sum(2)) //=> 2
 console.log(sum(3)) //=> 3
