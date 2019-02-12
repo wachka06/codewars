@@ -18,11 +18,15 @@ function validate(password) {
   let alphabetU = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('')
   let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
   let numbers = '0123456789'.split('')
+  let punctuation = ';. '
   let countU = 0
   let countL = 0
   let countNum = 0
   for (let i = 0; i < password.length; i++) {
     let char = password[i]
+    if (punctuation.includes(char)) {
+      return false
+    }
     if (alphabetU.includes(char)) {
       countU += 1
     }
