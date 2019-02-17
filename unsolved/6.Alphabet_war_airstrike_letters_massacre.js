@@ -56,8 +56,10 @@ function alphabetWar(fight) {
     return "Right side wins!"
   } else {
     return "Let's fight again!"
+
   }
 }
+
 
 console.log(alphabetWar("z")) //=> "Right side wins!"
 console.log(alphabetWar("****")) //=> "Let's fight again!"
