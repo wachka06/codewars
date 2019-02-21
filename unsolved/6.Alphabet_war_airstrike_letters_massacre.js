@@ -60,6 +60,7 @@ function alphabetWar(fight) {
   }
 }
 
+
 console.log(alphabetWar("z")) //=> "Right side wins!"
 console.log(alphabetWar("****")) //=> "Let's fight again!"
 console.log(alphabetWar("z*dq*mw*pb*s")) //=>"Let's fight again!"
