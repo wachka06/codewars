@@ -16,19 +16,32 @@ So the result string will be: `"Sml etipetx"`
 https://www.codewars.com/kata/simple-transposition/train/javascript
 ***********************************************************************/
 
+// function simpleTransposition(text) {
+//   let result1 = [];
+//   let result2 = [];
+//
+//   for (let i = 0; i < text.length; i++) {
+//     let char = text[i];
+//     if (i % 2 === 0) {
+//       result1.push(char);
+//     } else {
+//       result2.push(char)
+//     }
+//   }
+//   return result1.join('') + result2.join('');
+// }
+
+// Solution 2
+
 function simpleTransposition(text) {
-  let result1 = [];
-  let result2 = [];
+  let result1 = ''
+  let result2 = ''
 
   for (let i = 0; i < text.length; i++) {
-    let char = text[i];
-    if (i % 2 === 0) {
-      result1.push(char);
-    } else {
-      result2.push(char)
-    }
+    i % 2 ? (result2 += text[i]) : (result1 += text[i])
   }
-  return result1.join('') + result2.join('');
+
+  return result1 + result2
 }
 
 console.log(simpleTransposition("Sample text")) //=>  "Sml etapetx"
