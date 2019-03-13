@@ -18,7 +18,7 @@ function notPrimes(a,b){
       if (numArr.includes(i.toString())) {
         result.push(i)
       }
-    }
+    } 
   }
   return result
 }
