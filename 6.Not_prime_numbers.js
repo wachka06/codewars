@@ -9,7 +9,7 @@ Good luck :)
 https://www.codewars.com/kata/not-prime-numbers/train/javascript
 ***********************************************************************/
 
-function notPrimes(a,b){
+function notPrimes(a, b){
   let result = []
   let numArr = ['2', '3', '5', '7']
 
@@ -18,7 +18,7 @@ function notPrimes(a,b){
       if (numArr.includes(i.toString())) {
         result.push(i)
       }
-    } 
+    }
   }
   return result
 }
