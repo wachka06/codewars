@@ -8,8 +8,6 @@ Examples
 https://www.codewars.com/kata/reverse-words/train/javascript
 ***********************************************************************/
 
-
-
 function reverseWords(str) {
   let wordArr = str.split(' ')
   let result = []
@@ -28,7 +26,6 @@ function reverseWord(word) {
   }
   return result
 }
-
 
 console.log(reverseWords('The quick brown fox jumps over the lazy dog.')) //=> 'ehT kciuq nworb xof spmuj revo eht yzal .god'
 console.log(reverseWords('apple')) //=> 'elppa'
