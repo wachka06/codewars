@@ -9,11 +9,17 @@ https://www.codewars.com/kata/vowel-count/train/javascript
 ***********************************************************************/
 
 function getCount(str) {
-  var vowelsCount = 0;
+  let vowelsCount = 0
+  let vowels = 'aeiou'.split('')
 
-  // enter your majic here
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i]
+    if (vowels.includes(char)) {
+      vowelsCount += 1
+    }
+  }
 
-  return vowelsCount;
+  return vowelsCount
 }
 
-console.log(getCount("abracadabra") //=> 5
+console.log(getCount("abracadabra")) //=> 5
