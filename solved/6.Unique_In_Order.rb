@@ -11,7 +11,19 @@
 ##***********************************************************************
 
 def unique_in_order(iterable)
+  if !iterable.kind_of?(Array)
+    orig = iterable.split("")
+  else
+    orig = iterable
+  end
 
+  arr = []
+  orig.each_with_index do |char, index|
+    if orig[index] != orig[index + 1]
+      arr << char
+    end
+  end
+  arr
 end
 
 console.log(uniqueInOrder('AAAABBBCCDAABBB')) ## => ['A', 'B', 'C', 'D', 'A', 'B']
