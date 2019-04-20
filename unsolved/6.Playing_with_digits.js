@@ -26,8 +26,14 @@ digPow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688
 https://www.codewars.com/kata/playing-with-digits/train/javascript
 ***********************************************************************/
 
-function digPow(n, p){
-  // ...
+function digPow(num, power) {
+  let result = 1;
+
+  for (let i = 0; i < num.length; i++) {
+    for (let j = 0; j < power; j++) {
+      result
+    }
+  }
 }
 
 console.log(digPow(89, 1)) //=> 1

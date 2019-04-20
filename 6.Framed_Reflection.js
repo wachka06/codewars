@@ -29,7 +29,12 @@ function mirror(text){
 
   longest = longest + 2
   // console.log(longest)
+  let result = ''
 
+  for (let i = 0; i < arr.length; i++) {
+    let w = arr[i]
+
+  }
 }
 
 function countLetter(word) {
