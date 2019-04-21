@@ -15,21 +15,42 @@ rot13("This is my first ROT13 excercise!" == "Guvf vf zl svefg EBG13 rkprepvfr!"
 https://www.codewars.com/kata/rot13/train/javascript
 *******************************************************************************/
 
+// function rot13(str) {
+//   let result = ''
+//   let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+//   let alphabetCap = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+//
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i]
+//     if (alphabet.includes(char)) {
+//       result += alphabet[(alphabet.indexOf(char) + 13) % alphabet.length]
+//     } else if (alphabetCap.includes(char)) {
+//       result += alphabetCap[(alphabetCap.indexOf(char) + 13) % alphabetCap.length]
+//     } else {
+//       result += char
+//     }
+//   }
+//   return result
+// }
+
+// solution 2
+
 function rot13(str) {
   let result = ''
   let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
-  let alphabetCap = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
   for (let i = 0; i < str.length; i++) {
     let char = str[i]
-    if (alphabet.includes(char)) {
+    let lowerChar = str[i].toLowerCase()
+    if ((alphabet.includes(lowerChar)) && !(alphabet.includes(char))) {
+      result += alphabet[(alphabet.indexOf(lowerChar) + 13) % alphabet.length].toUpperCase()
+    } else if (alphabet.includes(char)) {
       result += alphabet[(alphabet.indexOf(char) + 13) % alphabet.length]
-    } else if (alphabetCap.includes(char)) {
-      result += alphabetCap[(alphabetCap.indexOf(char) + 13) % alphabetCap.length]
     } else {
       result += char
     }
   }
+
   return result
 }
 
