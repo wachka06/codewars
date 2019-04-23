@@ -35,17 +35,64 @@ https://www.codewars.com/kata/rot13/train/javascript
 
 // solution 2
 
+// function rot13(str) {
+//   let result = ''
+//   let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+//
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i]
+//     let lowerChar = str[i].toLowerCase()
+//     if ((alphabet.includes(lowerChar)) && !(alphabet.includes(char))) {
+//       result += alphabet[(alphabet.indexOf(lowerChar) + 13) % alphabet.length].toUpperCase()
+//     } else if (alphabet.includes(char)) {
+//       result += alphabet[(alphabet.indexOf(char) + 13) % alphabet.length]
+//     } else {
+//       result += char
+//     }
+//   }
+//
+//   return result
+// }
+
+// solution 3
+
 function rot13(str) {
   let result = ''
-  let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+  let alphabet = {
+    a: 'n',
+    b: 'o',
+    c: 'p',
+    d: 'q',
+    e: 'r',
+    f: 's',
+    g: 't',
+    h: 'u',
+    i: 'v',
+    j: 'w',
+    k: 'x',
+    l: 'y',
+    m: 'z',
+    n: 'a',
+    o: 'b',
+    p: 'c',
+    q: 'd',
+    r: 'e',
+    s: 'f',
+    t: 'g',
+    u: 'h',
+    v: 'i',
+    w: 'j',
+    x: 'k',
+    y: 'l',
+    z: 'm'
+  }
 
   for (let i = 0; i < str.length; i++) {
     let char = str[i]
-    let lowerChar = str[i].toLowerCase()
-    if ((alphabet.includes(lowerChar)) && !(alphabet.includes(char))) {
-      result += alphabet[(alphabet.indexOf(lowerChar) + 13) % alphabet.length].toUpperCase()
-    } else if (alphabet.includes(char)) {
-      result += alphabet[(alphabet.indexOf(char) + 13) % alphabet.length]
+    if ((alphabet[char] === undefined) && !(alphabet[char.toLowerCase()] === undefined)) {
+      result += alphabet[char.toLowerCase()].toUpperCase()
+    } else if (alphabet[char] !== undefined) {
+      result += alphabet[char.toLowerCase()]
     } else {
       result += char
     }
